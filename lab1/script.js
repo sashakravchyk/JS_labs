@@ -31,11 +31,7 @@ function triangle(val1, type1, val2, type2) {
         return "failed";
     }
 
-    // Перетворення рядкових значень у числа, якщо необхідно
-    val1 = typeof val1 === 'number' ? val1 : parseFloat(val1);
-    val2 = typeof val2 === 'number' ? val2 : parseFloat(val2);
-
-    let c, a, b, alpha, beta;
+    let a, b, c, alpha, beta;
 
     // Перевірка усіх можливих порядків типів аргументів
     switch (type1) {
