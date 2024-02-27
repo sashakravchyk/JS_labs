@@ -9,7 +9,7 @@ console.log("- opposite angle (протилежний до катета кут)"
 console.log("- angle (один з двох гострих кутів)");
 console.log("Приклад виклику функцій:");
 console.log("triangle(4, 'leg', 8, 'hypotenuse');");
-
+console.log("___________________________________________________________________");
 
 function triangle(val1, type1, val2, type2) {
     // Перевірка на наявність правильних типів
@@ -31,10 +31,62 @@ function triangle(val1, type1, val2, type2) {
         return "failed";
     }
 
-    let a, b, c, alpha, beta;
+    let c, a, b, alpha, beta;
 
     // Перевірка усіх можливих порядків типів аргументів
     switch (type1) {
+        case "adjacent angle":
+            switch(type2){
+                case "hypotenuse":
+                    alpha = val1;
+                    beta = 90 - alpha;
+                    a = Math.sqrt(c * c - b * b); 
+                    c = val2;
+                    if (a >= c) {
+                        console.log("Значення катету не може бути більшим або рівним за значення гіпотенузи.");
+                        return "failed";
+                    }
+                    b = (c * Math.sin(alpha * (Math.PI / 180)));
+                    break;
+
+                    case "leg":
+                        beta = val1;
+                        a = val2;
+                        b = (a * Math.tan(beta * (Math.PI / 180)));
+                        c = Math.sqrt(b * b + a * a);
+                        alpha = 90 - beta;
+                        break;
+                }
+                break;
+            
+
+
+
+
+
+                case "opposite angle":
+                    switch(type2) {
+                        case "leg":
+                            alpha = val1;
+                            a = val2;
+                            c = (a / Math.sin(alpha * (Math.PI / 180)));
+                            b = Math.sqrt(c * c - a * a);
+                            beta = 90 - alpha;
+                            break;
+
+                            case "hypotenuse":
+                                alpha = val1;
+                                beta = 90 - alpha;
+                                c = val2;
+                                a = (c * Math.sin(alpha * (Math.PI / 180)));
+                                b = Math.sqrt(c * c - a * a);
+                                break;
+                            }
+                        break;
+
+
+
+
         case "leg":
             switch (type2) {
                 case "hypotenuse":
@@ -45,7 +97,14 @@ function triangle(val1, type1, val2, type2) {
                         return "failed";
                     }
                     b = Math.sqrt(c * c - a * a);
-                    alpha = Math.atan(a / b) * (180 / Math.PI);
+                    alpha = Math.asin(a / c) * (180 / Math.PI);
+                    beta = 90 - alpha;
+                    break;
+                case "leg":
+                    a = val1;
+                    b = val2;
+                    c = Math.sqrt(b * b + a * a);
+                    alpha = Math.asin(a / c) * (180 / Math.PI);
                     beta = 90 - alpha;
                     break;
                 case "angle":
@@ -54,6 +113,20 @@ function triangle(val1, type1, val2, type2) {
                     beta = 90 - alpha;
                     b = a / Math.tan(alpha * (Math.PI / 180));
                     c = Math.sqrt(a * a + b * b);
+                    break;
+                case "adjacent angle":
+                    a = val1;
+                    beta = val2;
+                    alpha = 90 - beta;
+                    b = a / Math.tan(beta * (Math.PI / 180));
+                    c = a / Math.sin(beta * (Math.PI / 180));
+                    break;
+                case "opposite angle":
+                    a = val1;
+                    alpha = val2;
+                    beta = 90 - alpha;
+                    b = a / Math.tan(alpha * (Math.PI / 180));
+                    c = a / Math.sin(alpha * (Math.PI / 180));
                     break;
             }
             break;
@@ -67,7 +140,7 @@ function triangle(val1, type1, val2, type2) {
                         return "failed";
                     }
                     b = Math.sqrt(c * c - a * a);
-                    alpha = Math.atan(a / b) * (180 / Math.PI);
+                    alpha = Math.asin(a / c) * (180 / Math.PI);
                     beta = 90 - alpha;
                     break;
                 case "angle":
