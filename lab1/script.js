@@ -118,8 +118,8 @@ function triangle(val1, type1, val2, type2) {
                     a = val1;
                     beta = val2;
                     alpha = 90 - beta;
-                    b = a / Math.tan(beta * (Math.PI / 180));
-                    c = a / Math.sin(beta * (Math.PI / 180));
+                    c =  a / Math.cos(beta * (Math.PI / 180));
+                    b = Math.sqrt(c * c - a * a);
                     break;
                 case "opposite angle":
                     a = val1;
