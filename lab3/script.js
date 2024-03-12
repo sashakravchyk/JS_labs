@@ -1,7 +1,6 @@
 // 1.2.3
 var car1 = new Object();
 
-
 car1.color = "Red";
 car1.maxSpeed = 250; 
 car1.driver = { 
@@ -18,7 +17,6 @@ car1.drive = function() {
     console.log("I am not driving at night");
 };
 
-
 //1.2.3
 console.log("1.2.3");
 console.log("car1:", car1);
@@ -28,8 +26,6 @@ car1.drive();
 console.log("----------------------------------");
 
 // 1.2.4
-
-
 var car2 = {
     color: "Blue", 
     maxSpeed: 180, 
@@ -134,7 +130,6 @@ class Square {
         this.a = a;
     }
 
-
     length() {
         console.log("Sum of sides: ", 4 * this.a);
     }
@@ -178,10 +173,8 @@ console.log("----------------------------------");
 square.info();
 console.log("----------------------------------");
 
-
 //1.2.16
 console.log("1.2.16");
-
 
 class Rectangle extends Square {
     constructor(a, b) {
