@@ -20,7 +20,7 @@ const ExchangeSort = {
       }
   
       console.log("Відсортований масив (за зростанням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
@@ -42,7 +42,7 @@ const ExchangeSort = {
       }
   
       console.log("Відсортований масив (за спаданням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
 };
@@ -81,7 +81,7 @@ const SelectionSort = {
       arr.push(...Array(undefinedCount).fill(undefined));
   
       console.log("Відсортований масив (за зростанням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
@@ -115,7 +115,7 @@ const SelectionSort = {
       arr.push(...Array(undefinedCount).fill(undefined));
   
       console.log("Відсортований масив (за спаданням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     }
 };
@@ -154,7 +154,7 @@ const InsertionSort = {
       arr.push(...undefinedValues); 
   
       console.log("Відсортований масив (за зростанням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
@@ -188,7 +188,7 @@ const InsertionSort = {
       arr.push(...undefinedValues); 
   
       console.log("Відсортований масив (за спаданням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     }
 }; 
@@ -228,7 +228,7 @@ const ShellSort = {
       arr.push(...undefinedValues); 
   
       console.log("Відсортований масив (за зростанням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
@@ -263,7 +263,7 @@ const ShellSort = {
       arr.push(...undefinedValues); 
   
       console.log("Відсортований масив (за спаданням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     }
 };
@@ -287,7 +287,7 @@ const ShellSort = {
         arr.splice(index, 1);
       });
       console.log("Відсортований масив (за зростанням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
@@ -306,7 +306,7 @@ const ShellSort = {
         arr.splice(index, 1);
       });
       console.log("Відсортований масив (за спаданням):", arr);
-      console.log("К-сть перестановок:", this.compareCount);
+      console.log("К-сть порівнянь:", this.compareCount);
       console.log("К-сть обмінів:", this.exchangeCount);
     },
   
