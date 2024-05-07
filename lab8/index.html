@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна сторінка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="nav">
+        <!-- Навігаційне меню для Large-пристроїв -->
+        <ul id="navLarge">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- Гамбургер меню для Medium-пристроїв -->
+        <button id="hamburger">&#9776;</button>
+        <ul id="navMedium">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="carousel" class="carousel">
+        <div class="slides">
+            <img src="https://place-hold.it/600x300/red/blue/blue.png&text=Slide1&bold&italic&fontsize=24" alt="Slide 1">
+            <img src="https://place-hold.it/600x300/blue/red/red.png&text=Slide2&bold&italic&fontsize=24" alt="Slide 2">
+            <img src="https://place-hold.it/600x300/fff/blue/blue.png&text=Slide3&bold&italic&fontsize=24" alt="Slide 3">
+        </div>
+        <button id="prevBtn" class="carousel-btn">←</button>
+        <button id="nextBtn" class="carousel-btn">→</button>
+        <div id="indicator" class="indicator"></div>
+    </div>    
+
+
+    <div id="largeImages">
+        <img src="https://via.placeholder.com/400x200?text=Large+Image+1" alt="Large Image 1">
+        <img src="https://via.placeholder.com/400x200?text=Large+Image+2" alt="Large Image 2">
+    </div>
+
+ 
+    <div id="mediumImages">
+        <img src="https://via.placeholder.com/300x150?text=Medium+Image+1" alt="Medium Image 1">
+        <img src="https://via.placeholder.com/300x150?text=Medium+Image+2" alt="Medium Image 2">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
