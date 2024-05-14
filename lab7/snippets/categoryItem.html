@@ -1,0 +1,26 @@
+<div
+  class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 d-flex justify-content-center mt-5 mb-5"
+>
+  <div class="card p-0 rounded" style="width: 18rem">
+    <h5 class="text-center fw-bold">{{name}}</h5>
+    <div class="d-flex justify-content-center">
+      <img
+        src="img/catalog/{{short_name}}/{{short_name}}.png"
+        style="width: 200px; height: 200px"
+        class="card-img-top img-fluid"
+        alt="{{name}}"
+      />
+    </div>
+    <div class="card-body">
+      <p class="card-text text-center">Notes About Category</p>
+    </div>
+    <div class="card-footer d-grid gap-2">
+      <a
+        href="#"
+        onclick="$ns.loadCatalogItems('{{short_name}}');"
+        class="btn btn-outline-secondary"
+        >Go to Category</a
+      >
+    </div>
+  </div>
+</div>

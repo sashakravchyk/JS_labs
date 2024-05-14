@@ -1,0 +1,37 @@
+{
+  "catalog_items": [
+    {
+      "id": 21,
+      "short_name": "C21",
+      "name": "C21",
+      "description": "Notes about C21.",
+      "price_retail": 99.99
+    },
+    {
+      "id": 22,
+      "short_name": "C22",
+      "name": "C22",
+      "description": "Notes about C22.",
+      "price_retail": 99.99
+    },
+    {
+      "id": 23,
+      "short_name": "C23",
+      "name": "C23",
+      "description": "Notes about C23.",
+      "price_retail": 99.99
+    },
+    {
+      "id": 24,
+      "short_name": "C24",
+      "name": "C24",
+      "description": "Notes about C24.",
+      "price_retail": 99.99
+    }
+  ],
+  "category": {
+    "short_name": "C2",
+    "name": "Category 2",
+    "special_instructions": "Notes about C2 category."
+  }
+}
